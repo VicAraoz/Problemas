@@ -1,7 +1,16 @@
 #include <stdio.h>
 
 int find_missing_number(int* nums, int nums_size) {
-    return 0;
+    for (int i = 0; i < nums_size; i++){
+        if(nums[nums_size -1 - i] != nums[nums_size - 1] - i){
+            return nums[nums_size-1] - i;
+        }
+
+    }
+    if( nums[0] != 1){
+        return 1;
+    }
+    return nums_size + 1;
 }
 
 // TESTS

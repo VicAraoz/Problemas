@@ -3,7 +3,25 @@
 #include <string.h>
 
 int max_product_of_substring(const char* str, int k) {
-    return 0;
+    int counter;
+    int max = 0;
+    long unsigned int length = strlen(str);
+    for(int i = 0; i < length; i++){
+        
+        counter = 1;
+
+        for(int j = i; j < i + k; j++){
+            if(i + k <= length){
+                // printf("%d\n", (str[j] - '0'));
+                counter *=  (str[j] - '0');
+            }
+        }
+
+        if (counter > max){
+            max = counter;
+        }
+    }
+    return max;
 }
 
 // TESTS

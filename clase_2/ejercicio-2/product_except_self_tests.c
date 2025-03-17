@@ -2,8 +2,16 @@
 #include <stdlib.h>
 
 void product_except_self(int* nums, int numsSize, int* output) {
-
+    for(int i = 0; i < numsSize; i++){
+        output[i] = 1;
+            for(int e = 0; e < numsSize; e++){
+                if(i != e){
+                    output[i] *= nums[e];
+                }
+        }
+    }
 }
+
 
 // TESTS
 void run_tests() {

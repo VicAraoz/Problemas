@@ -2,17 +2,33 @@
 #include <stdio.h>
 #include <limits.h>
 
-int get_max_sub_array_sum(int* nums, int numsSize) {
-    return 0;
+int get_max_sub_array_sum(int* nums, int numsSize) {//
+    int contador = 0;
+    int max = -1;
+    for(int i = 0; i < numsSize; i++){
+        contador += nums[i];
+        printf("%d\n", max);
+
+        
+        
+        if(contador < 0){
+            contador = 0;
+        }
+        else if(contador > max){
+            max = contador;
+        }
+        
+    }
+    return max;
 }
 
 // TESTS
 void run_tests() {
-    int test1[] = {-6, -1, 1, 2, 3, 1, -5, 4};
+    int test1[] = {-2, 1, -3, 4, -1, 2, 1, -5, 4};
     int size1 = sizeof(test1) / sizeof(test1[0]);
     printf("Prueba 1: Suma máxima = %d (Esperado: 6)\n", get_max_sub_array_sum(test1, size1));
     
-    int test2[] = {-6, -6, -6, -6};
+    int test2[] = {1, 2, 3, 4, 5};
     int size2 = sizeof(test2) / sizeof(test2[0]);
     printf("Prueba 2: Suma máxima = %d (Esperado: 15)\n", get_max_sub_array_sum(test2, size2));
     
@@ -29,3 +45,4 @@ int main() {
     run_tests();
     return 0;
 }
+

@@ -5,7 +5,23 @@
 #include "stack.h"
 
 char* invert_expression(const char* expression) {
-    return expression;
+    long unsigned int length = strlen(expression);
+    
+    char * result = malloc(sizeof(char) * length + 1); // heap pq tengo q devolver, y +1 por el '\0'.xq devuelve la longitud de la cadena sin contar el \0.
+    for(int i = 0; i < length; i++){
+
+        if(expression[length - 1 - i] == '('){
+            result[i] = ')';
+        }
+        else if(expression[length - 1 - i] == ')'){
+            result[i] = '(';
+        }
+        else{
+            result[i] = expression[length - 1 - i];
+        }
+    result[length] = '\0';
+    }
+    return result;
 }
 
 // TEST

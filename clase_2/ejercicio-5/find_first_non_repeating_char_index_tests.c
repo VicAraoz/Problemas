@@ -3,6 +3,25 @@
 #include <string.h>
 
 int find_first_non_repeating_char_index(const char* str) {
+    long unsigned int length = strlen(str);
+    for(int i = 0; i < length; i++){
+        int repeat = 0;
+        // printf("%c\n", str[i]);
+        for(int j = 0; j < length; j++){
+            
+            // printf("%c", str[j]);
+            if(str[i] == str[j] && i != j){
+                // printf("%c", str[j]);
+                repeat++;
+            }
+        }
+        
+        // printf("%d\n", repeat);
+        if(repeat == 0){
+            return i;
+        }
+        }
+    
     return -1; // Si no hay ningún carácter no repetido
 }
 
