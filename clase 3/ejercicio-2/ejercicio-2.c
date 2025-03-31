@@ -1,7 +1,8 @@
 #include <stdio.h>
+#include <stdbool.h>
 
 int find_min_distance(int* nums, int nums_size) {
-    return 0;
+    return -1;
 }
 
 // TESTS
@@ -20,9 +21,9 @@ void run_tests() {
   TestCase tests[] = {
       {test_1, sizeof(test_1) / sizeof(test_1[0]), -1},
       {test_2, sizeof(test_2) / sizeof(test_2[0]), 1},
-      {test_3, sizeof(test_3) / sizeof(test_3[0]), 3},
+      {test_3, sizeof(test_3) / sizeof(test_3[0]), 2},
       {test_4, sizeof(test_4) / sizeof(test_4[0]), -1},
-      {test_5, sizeof(test_5) / sizeof(test_5[0]), 2}
+      {test_5, sizeof(test_5) / sizeof(test_5[0]), 3}
   };
 
   int num_tests = sizeof(tests) / sizeof(tests[0]);
