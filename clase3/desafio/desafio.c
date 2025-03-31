@@ -1,6 +1,9 @@
 #include <stdio.h>
 
 int diagonal_difference(int** nums, int nums_size) {
+  for(int i = 0; i < nums_size; i++){
+    
+  }
     return 0;
 }
 
