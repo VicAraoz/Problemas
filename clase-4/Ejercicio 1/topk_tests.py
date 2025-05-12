@@ -8,7 +8,7 @@ def find_top_k(arr, k):
     
     
 
-    return arr
+    return top_k
 
 # TESTS
 def run_tests():
