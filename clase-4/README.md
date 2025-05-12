@@ -11,7 +11,7 @@ Se requiere una función **top k** que reciba un arreglo de números y un valor 
 Se analizan tres implementaciones con distintas complejidades:  
 
 1. **Ordenando el arreglo:**  
-   - Se ordena el arreglo y se toman los `k` mayores.  
+   - Se ordena el arreglo y se toman los `k` mayores.   // O(n log(n)) (minimo) + O(k), como k < n, es mayor O(nlogn) 
    - 📌 **Pregunta:** ¿Cuál es la complejidad de esta implementación?  
 
 2. **Usando un arreglo auxiliar de `k` elementos:**  
@@ -20,7 +20,8 @@ Se analizan tres implementaciones con distintas complejidades:
    - 📌 **Pregunta:** ¿Cuál es la complejidad de esta implementación?  
 
 3. **Optimización con `O(n log k)`:**  
-   - Diseñar e implementar una solución eficiente que mantenga los `k` mayores elementos con una complejidad **O(n log k)**.  
+   - Diseñar e implementar una solución eficiente que mantenga los `k` mayores elementos con una complejidad **O(n log k)**.
+   sera agarrar los 3 mayores, insertarlos (log k), y luego insertar sin hacer heap up a los otros elementos del array
 
 ---
 

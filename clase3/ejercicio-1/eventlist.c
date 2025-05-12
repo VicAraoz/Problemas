@@ -73,7 +73,7 @@ void remove_expired_events(EventList* list, time_t current_time) {
 
                 else if(toDelete == list->tail){
                     list->tail = toDelete->prev;
-                    // si la lista está vacía
+                    // si la lista está vacía, pq quizas tiene un solo elemento, y ahora list->tail = NULL
                     if(list->tail != NULL){
                         list->tail->next = NULL;
                     }
