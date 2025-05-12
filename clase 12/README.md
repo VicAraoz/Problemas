@@ -33,21 +33,14 @@ Se garantiza que cada par no ordenado de amigos aparece como mucho una vez, y qu
 ```
 4 2
 1 2
-3 4
+3 2
 ```
 
 #### Salida
 
 ```
-2
+1
 ```
-
-### Explicación
-
-* Los perfiles 1 y 2 tienen el mismo conjunto de amigos (entre ellos), y los perfiles 3 y 4 también.
-* Entonces los pares (1, 2) y (3, 4) son duplicados.
-* Resultado: 2.
-
 
 ## Problema 2: Santa y los Palíndromos
 
