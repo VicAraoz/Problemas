@@ -4,7 +4,10 @@ from collections import defaultdict
 # n número total de perfiles. 
 # m número total de amistades
 def count_double_profiles(n, m, friendships):
-    # todo
+    dic = {}
+    for i in range(1, n+1):
+        friendships[i]
+
 
 
 class TestDoubleProfiles(unittest.TestCase):
@@ -20,7 +23,7 @@ class TestDoubleProfiles(unittest.TestCase):
     def test_all_connected_to_one(self):
         friendships = [(1, 2), (1, 3), (1, 4), (1, 5)]
         self.assertEqual(count_double_profiles(5, 4, friendships), 3)
-        # Todos los nodos 2-5 tienen como único amigo al nodo 1 → C(4, 2) = 6
+        # Todos los nodos 2-5 tienen como único amigo al nodo 1 → C(4, 2) = 3
 
     def test_unique_friendsets(self):
         friendships = [(1, 2), (2, 3), (3, 4), (4, 5)]
