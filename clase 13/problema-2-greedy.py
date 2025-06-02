@@ -1,7 +1,42 @@
 import unittest
+import math
 from heapq import heappush, heappop
 
 def min_transfers(debt):
+    deudores = []
+    acreedores = []
+    personas = {}
+    for lista in range(len(debt)):
+        personas[lista] = 0
+    
+    for fila in range(len(debt)):
+        for columna in range(len(debt[fila])):
+            personas[fila] -= debt[fila][columna]
+            personas[columna] += debt[fila][columna]
+    
+
+    for persona in personas:
+        if personas[persona] < 0:
+            deudores += [[persona, personas[persona]]] # que persona es, deuda
+        if personas[persona] > 0:
+            acreedores += [[persona, personas[persona]]]
+
+    deudores.sort()
+    acreedores.sort()
+
+    i, j = 0, 0
+    while i < len(deudores) and j < len(acreedores):
+        print(f'holaa {acreedores}, a {deudores}')
+        acreedores[j][1] += deudores[i][1]
+        deudores[i][1] -= (deudores[i][1])
+
+        if(deudores[i][1] == 0):
+            i += 1
+        if(acreedores[j][1] == 0):
+            j += 1
+        
+
+            
 
 
 
